@@ -80,6 +80,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Desktop: zoom out to 85% for better visuals */
+@media (min-width: 1024px) {
+  html {
+    zoom: 0.85;
+  }
+}
+
 body {
   background: var(--background-base);
   color: var(--text-primary);
