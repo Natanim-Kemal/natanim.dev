@@ -1,26 +1,305 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --background-base: #F4F4F4;
+  /* Light gray - page background */
+  --background-surface: #FFFFFF;
+  /* White - cards, elevated surfaces */
+  --background-elevated: #FFFFFF;
+  /* Navbar scrolled state */
+
+  /* Grid & Decorative */
+  --grid-line: #e0e0e0;
+  /* Soft gray grid lines */
+  --grid-plus: #CBCCCD;
+  /* Slightly darker for "+" symbols */
+
+  /* Text */
+  --text-primary: #0F0F0F;
+  /* Near black - headings */
+  --text-secondary: #6B7280;
+  /* Gray - body text */
+  --text-muted: #9CA3AF;
+  /* Light gray - muted text */
+
+  /* Accent */
+  --accent-primary: #0F0F0F;
+  /* Primary buttons */
+  --accent-hover: #262626;
+  /* Button hover state */
+
+  /* Shadows */
+  --shadow-navbar: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Layout */
+  --max-width: 1200px;
+  --navbar-height: 64px;
+}
+
+/* Dark Theme */
+.dark {
+  --background-base: #0A0A0A;
+  --background-surface: #141414;
+  --background-elevated: #1A1A1A;
+
+  --grid-line: #2A2A2A;
+  --grid-plus: #3A3A3A;
+
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
+
+  --accent-primary: #FAFAFA;
+  --accent-hover: #E4E4E7;
+
+  --shadow-navbar: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background-base);
+  --color-foreground: var(--text-primary);
+  --color-surface: var(--background-surface);
+  --color-grid: var(--grid-line);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-base);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: var(--accent-primary);
+  color: var(--background-base);
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.dark .btn-primary {
+  color: #0A0A0A;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 9999px;
+  border: 1px solid var(--grid-line);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background: var(--background-surface);
+  border-color: var(--text-muted);
+}
+
+/* Card Styles */
+.card {
+  background: var(--background-surface);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  padding: 32px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease forwards;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-primary);
+  color: white;
+}
+
+/* Marquee Animation - scrolls right to left */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.marquee-content.marquee-reverse {
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 24px;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Grayscale emojis */
+.emoji-bw {
+  filter: grayscale(100%);
+}
+
+/* Float animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Slow pulse */
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Fade in */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
 }
