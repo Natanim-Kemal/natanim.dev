@@ -21,7 +21,7 @@ export default function Home() {
         {/* Hero Section */}
         <Hero />
 
-        {/* Tech Stack Marquee - pushed up closer to hero */}
+        {/* Tech Stack Marquee */}
         <div className="mt-4">
           <TechMarquee />
         </div>

@@ -190,7 +190,7 @@ export default function Work() {
                 </div>
             </div>
 
-            {/* Mini Projects Grid - Cal.com exact styling */}
+            {/* Mini Projects Grid */}
             <div className="w-full px-4 md:px-8">
                 <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-[900px] mx-auto">
                     {miniProjects.map((project, index) => (
@@ -204,7 +204,7 @@ export default function Work() {
                                 boxShadow: 'rgba(36, 36, 36, 0.7) 0px 1px 5px -4px, rgba(36, 36, 36, 0.05) 0px 4px 8px 0px',
                             }}
                         >
-                            {/* Icon Wrapper - Cal.com style */}
+                            {/* Icon Wrapper */}
                             <div
                                 className={`relative w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 rounded-xl flex items-center justify-center overflow-hidden transition-opacity duration-300 md:group-hover:opacity-0 ${activeCard === index ? 'opacity-0' : ''}`}
                                 style={{
@@ -215,7 +215,7 @@ export default function Work() {
                                 {/* Icon */}
                                 <span className="text-xl md:text-2xl emoji-bw z-10">{project.icon}</span>
 
-                                {/* Decorative lines - Cal.com style */}
+                                {/* Decorative lines */}
                                 <div className="absolute bottom-1.5 left-1.5 right-1.5 flex flex-col gap-1">
                                     <div className="h-1 rounded-full" style={{ backgroundColor: 'rgb(224, 224, 224)', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 1.9px 0px inset' }} />
                                     <div className="h-1 w-3/4 rounded-full" style={{ backgroundColor: 'rgb(224, 224, 224)', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 1.9px 0px inset' }} />
@@ -230,7 +230,7 @@ export default function Work() {
                                 {project.title}
                             </h4>
 
-                            {/* Hover Overlay - Cal.com style */}
+                            {/* Hover Overlay */}
                             <div
                                 className={`absolute inset-0 p-4 md:p-5 rounded-2xl flex flex-col items-center justify-center transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100 ${activeCard === index ? 'opacity-100' : 'opacity-0'}`}
                                 style={{ backgroundColor: 'var(--background-surface)' }}

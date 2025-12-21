@@ -8,7 +8,7 @@ const contributions = [
         quote: "Contributed to the Vike ecosystem by building essential plugins and documentation improvements.",
         project: 'vike.dev',
         role: 'Core Contributor',
-        logo: 'https://vike.dev/logo.svg',
+        logo: 'https://cdn.simpleicons.org/vite/black',
         link: 'https://github.com/vikejs/vike'
     },
     {
@@ -68,7 +68,7 @@ export default function OpenSource() {
                     </p>
                 </div>
 
-                {/* Contributions Grid - Cal.com testimonial style */}
+                {/* Contributions Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {contributions.map((contribution, index) => (
                         <a
@@ -129,7 +129,7 @@ export default function OpenSource() {
                                 </div>
                             </div>
 
-                            {/* Decorative Divider with + icons - Cal.com style */}
+                            {/* Decorative Divider with + icons */}
                             <div className="absolute bottom-0 left-0 right-0 h-px flex items-center">
                                 <div className="flex-1 h-px" style={{ backgroundColor: 'rgb(211, 211, 211)' }} />
                                 <div className="px-2">
