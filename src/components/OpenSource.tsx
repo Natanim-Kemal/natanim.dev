@@ -8,42 +8,42 @@ const contributions = [
         quote: "Contributed to the Vike ecosystem by building essential plugins and documentation improvements.",
         project: 'vike.dev',
         role: 'Core Contributor',
-        logo: 'https://cdn.simpleicons.org/vite/black',
+        logo: 'https://cdn.simpleicons.org/vite',
         link: 'https://github.com/vikejs/vike'
     },
     {
         quote: "Built solid-sonner, a toast notification library for SolidJS with beautiful animations.",
         project: 'solid-sonner',
         role: 'Creator & Maintainer',
-        logo: 'https://cdn.simpleicons.org/solid/black',
+        logo: 'https://cdn.simpleicons.org/solid',
         link: 'https://github.com/natanim/solid-sonner'
     },
     {
         quote: "Developed create-spring, a CLI tool for scaffolding Spring Boot projects with best practices.",
         project: 'create-spring',
         role: 'Creator & Maintainer',
-        logo: 'https://cdn.simpleicons.org/spring/black',
+        logo: 'https://cdn.simpleicons.org/spring',
         link: 'https://github.com/natanim/create-spring'
     },
     {
         quote: "Built bagon-hooks, a collection of essential React hooks for common use cases.",
         project: 'bagon-hooks',
         role: 'Creator & Maintainer',
-        logo: 'https://cdn.simpleicons.org/react/black',
+        logo: 'https://cdn.simpleicons.org/react',
         link: 'https://github.com/natanim/bagon-hooks'
     },
     {
         quote: "Created solid-number-flow for smooth animated number transitions in SolidJS applications.",
         project: 'solid-number-flow',
         role: 'Creator & Maintainer',
-        logo: 'https://cdn.simpleicons.org/solid/black',
+        logo: 'https://cdn.simpleicons.org/solid',
         link: 'https://github.com/natanim/solid-number-flow'
     },
     {
         quote: "Developed vike-metadata plugin for easy SEO metadata management in Vike projects.",
         project: 'vike-metadata',
         role: 'Creator & Maintainer',
-        logo: 'https://cdn.simpleicons.org/vite/black',
+        logo: 'https://cdn.simpleicons.org/vite',
         link: 'https://github.com/natanim/vike-metadata'
     },
 ];
@@ -98,15 +98,15 @@ export default function OpenSource() {
                                     <div
                                         className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden"
                                         style={{
-                                            border: '1px solid rgb(225, 226, 227)',
+                                            border: '1px solid rgba(57, 58, 59, 1)',
                                         }}
                                     >
                                         <img
                                             src={contribution.logo}
                                             alt={contribution.project}
-                                            className="w-6 h-6 object-contain dark:invert"
+                                            className="w-6 h-6 object-contain brightness-0"
                                             onError={(e) => {
-                                                (e.target as HTMLImageElement).src = 'https://cdn.simpleicons.org/github/black';
+                                                (e.target as HTMLImageElement).src = 'https://cdn.simpleicons.org/github';
                                             }}
                                         />
                                     </div>

@@ -316,3 +316,9 @@ h6 {
 .animate-fade-in {
   animation: fade-in 0.3s ease-out forwards;
 }
+
+/* Smooth icon color transition for theme toggle */
+.icon-themed {
+  color: var(--text-primary);
+  transition: color 0.3s ease, filter 0.3s ease;
+}

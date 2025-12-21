@@ -1,6 +1,6 @@
 # ✦ natanim.dev
 
-A modern, responsive portfolio website built with Next.js 16, Tailwind CSS, and TypeScript. Features a sleek Cal.com-inspired design with smooth animations and light/dark theme support.
+A modern, responsive portfolio website built with Next.js 16, Tailwind CSS, and TypeScript.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)

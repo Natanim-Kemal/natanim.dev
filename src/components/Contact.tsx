@@ -211,7 +211,7 @@ export default function Contact() {
                                 border: '1px solid var(--grid-line)',
                             }}
                         >
-                            <div className="text-2xl">📍</div>
+                            <div className="text-2xl" style={{ filter: 'grayscale(1)' }}>📍</div>
                             <div>
                                 <p className="font-medium" style={{ color: 'var(--text-primary)' }}>
                                     Addis Ababa, Ethiopia

@@ -6,16 +6,16 @@ import React from 'react';
 const featuredProjects = [
     {
         id: 1,
-        title: 'Project One',
-        description: 'A full-stack web application built with Next.js and PostgreSQL. Features real-time updates and modern UI.',
-        tags: ['Next.js', 'PostgreSQL', 'TypeScript'],
-        image: '/feature-1.jpg',
-        link: '#',
-        github: '#'
+        title: 'synce',
+        description: 'A mobile and desktop app for syncing pdf files between devices. Built with flutter and supabase.',
+        tags: ['Flutter', 'Supabase', 'TypeScript', 'NestJS', 'PostgreSQL'],
+        image: '/synce.png',
+        link: 'https://synce.app',
+        github: 'https://github.com/natanim/synce'
     },
     {
         id: 2,
-        title: 'Project Two',
+        title: '',
         description: 'Mobile-first Flutter application with backend API integration and offline-first architecture.',
         tags: ['Flutter', 'NestJS', 'MongoDB'],
         image: '/feature-2.jpg',
