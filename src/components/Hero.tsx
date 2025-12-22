@@ -172,7 +172,7 @@ export default function Hero() {
 
                             {/* Tech Stack Pills */}
                             <div className="flex flex-wrap gap-1 mb-6">
-                                {['Backend', 'Security', 'Ai automation', 'DevOps', 'Blockchain'].map((tech) => (
+                                {['Backend', 'cybersecurity', 'Ai automation', 'DevOps', 'Blockchain'].map((tech) => (
                                     <span
                                         key={tech}
                                         className="px-3 py-1.5 rounded-full text-sm font-medium"
@@ -192,7 +192,7 @@ export default function Hero() {
                                     {/* Large left image */}
                                     <div className="row-span-2 group relative overflow-hidden rounded-lg cursor-pointer">
                                         <img
-                                            src="/feature-1.jpg"
+                                            src="/synce.jpg"
                                             alt="Project 1"
                                             className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
                                         />
@@ -212,7 +212,7 @@ export default function Hero() {
                                     {/* Top right */}
                                     <div className="group relative overflow-hidden rounded-lg cursor-pointer">
                                         <img
-                                            src="/feature-3.jpg"
+                                            src="/zentask.png"
                                             alt="Project 3"
                                             className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
                                         />
@@ -222,7 +222,7 @@ export default function Hero() {
                                     {/* Bottom middle */}
                                     <div className="group relative overflow-hidden rounded-lg cursor-pointer">
                                         <img
-                                            src="/feature-4.jpg"
+                                            src="/mazinqo.jpg"
                                             alt="Project 4"
                                             className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
                                         />
@@ -232,10 +232,10 @@ export default function Hero() {
                                     {/* Bottom right */}
                                     <div className="group relative overflow-hidden rounded-lg cursor-pointer">
                                         <img
-                                            src="/feature-5.jpg"
+                                            src="/akllyl.jpg"
                                             alt="Project 5"
                                             className="w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-110"
-                                        />
+                                        />``
                                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                                     </div>
                                 </div>

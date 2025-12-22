@@ -8,55 +8,70 @@ const featuredProjects = [
         id: 1,
         title: 'synce',
         description: 'A mobile and desktop app for syncing pdf files between devices. Built with flutter and supabase.',
-        tags: ['Flutter', 'Supabase', 'TypeScript', 'NestJS', 'PostgreSQL'],
-        image: '/synce.png',
-        link: 'https://synce.app',
-        github: 'https://github.com/natanim/synce'
+        tags: ['Flutter', 'NestJS', 'PostgreSQL', 'AWS'],
+        image: '/synce.jpg',
+        link: 'https://synce.website',
+        github: 'https://github.com/natanim-kemal/synce'
     },
     {
         id: 2,
-        title: '',
-        description: 'Mobile-first Flutter application with backend API integration and offline-first architecture.',
-        tags: ['Flutter', 'NestJS', 'MongoDB'],
-        image: '/feature-2.jpg',
-        link: '#',
-        github: '#'
+        title: 'akllyl',
+        description: 'A modern photo studio website built with Next.js and Tailwind CSS.',
+        tags: ['NextJS', 'Tailwind', 'Python'],
+        image: '/akllyl.jpg',
+        link: 'https://akllyl.vercel.app',
+        github: 'https://github.com/natanim-kemal/akllyl'
     },
     {
         id: 3,
-        title: 'Project Three',
-        description: 'Security monitoring dashboard with real-time threat detection and automated response system.',
-        tags: ['Python', 'Redis', 'React'],
-        image: '/feature-3.jpg',
-        link: '#',
-        github: '#'
+        title: 'ModIntel - Ongoing*',
+        description: (
+            <>
+                Machine learning pipeline to enhance{' '}
+                <a
+                    href="https://owasp.org/www-project-modsecurity/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-colors"
+                    style={{ color: '#3b82f6' }}
+                >
+                    Modsecurity
+                </a>{' '}
+                analytics with visual dashboard.
+            </>
+        ),
+        tags: ['Python', 'Pandas', 'lua', 'Svelte', 'Tailwind'],
+        image: '/placeholder.png',
+        link: 'https://modintel.live',
+        github: 'htts://github.com/natanim-kemal/modintel'
     },
     {
         id: 4,
-        title: 'Project Four',
-        description: 'Decentralized application built on Ethereum with smart contracts and Web3 integration.',
-        tags: ['Solidity', 'TypeScript', 'Tailwind'],
-        image: '/feature-4.jpg',
+        title: '🌀',
+        description: 'Modern, asthetic, responsive portfolio website built with Next.js 16, Tailwind CSS, and TypeScript for myself.',
+        tags: ['TypeScript', 'NextJS', 'Tailwind'],
+        image: '/portfolio.png',
         link: '#',
-        github: '#'
+        github: '#',
+        isCurrentSite: true
     },
     {
         id: 5,
-        title: 'Project Five',
-        description: 'Machine learning pipeline for data processing and predictive analytics with visualization dashboard.',
-        tags: ['Python', 'TensorFlow', 'Svelte'],
-        image: '/feature-5.jpg',
-        link: '#',
-        github: '#'
+        title: 'neon-nexus',
+        description: 'IoT monitoring dashboard with real-time threat detection and automated response system.',
+        tags: ['TypeScript', 'Svelte', 'Tailwind'],
+        image: '/neon-nexus.png',
+        link: 'https://neon.nexus.neon',
+        github: 'https://github.com/natanim-kemal/neon-nexus'
     },
     {
         id: 6,
-        title: 'Project Six',
-        description: 'Developer productivity tool with CLI interface and VS Code extension integration.',
-        tags: ['TypeScript', 'Node.js', 'Express'],
-        image: '/feature-1.jpg',
-        link: '#',
-        github: '#'
+        title: 'zentask',
+        description: 'Minimalist productivity application focusing on deep work sessions and flow state.',
+        tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Supabase'],
+        image: '/zentask.png',
+        link: 'https://zentask.app',
+        github: 'https://github.com/natanim-kemal/zentask'
     },
 ];
 
@@ -70,7 +85,7 @@ const miniProjects = [
     { title: 'VS Code Theme', description: 'Custom dark theme for VS Code', icon: '🎨' },
     { title: 'API Wrapper', description: 'REST API client wrapper', icon: '🔌' },
     { title: 'Chrome Extension', description: 'Browser productivity extension', icon: '🧩' },
-    { title: 'Discord Bot', description: 'Moderation and utility bot', icon: '🤖' },
+    { title: 'Telegram Bot', description: 'Message automation bot from this website to my telegram', icon: '🤖' },
 ];
 
 export default function Work() {
@@ -153,18 +168,45 @@ export default function Work() {
 
                                 {/* Links */}
                                 <div className="flex gap-3">
-                                    <a
-                                        href={project.link}
-                                        className="flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-70"
-                                        style={{ color: 'var(--text-primary)' }}
-                                    >
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                        Live
-                                    </a>
+                                    {project.id === 4 ? (
+                                        <div
+                                            className="group/link flex items-center gap-1 text-sm font-medium cursor-default relative"
+                                            style={{ color: 'var(--text-primary)' }}
+                                        >
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                            <span className="relative inline-block">
+                                                <span className="transition-opacity duration-300 group-hover/link:opacity-0">
+                                                    Live
+                                                </span>
+                                                <span className="absolute left-0 top-0 whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover/link:opacity-100">
+                                                    You&apos;re already there
+                                                </span>
+                                                {/* Invisible spacer to reserve width on hover */}
+                                                <span className="hidden group-hover/link:inline opacity-0 whitespace-nowrap" aria-hidden="true">
+                                                    You&apos;re already there
+                                                </span>
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-70"
+                                            style={{ color: 'var(--text-primary)' }}
+                                        >
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                            Live
+                                        </a>
+                                    )}
                                     <a
                                         href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-70"
                                         style={{ color: 'var(--text-secondary)' }}
                                     >
